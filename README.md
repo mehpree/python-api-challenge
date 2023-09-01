@@ -1,128 +1,54 @@
-# python-api-challenge
+# Weather Analysis with Python
 
-### Background
-Data's true power is its ability to definitively answer questions. So, let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What is the weather like as we approach the equator?"
+## Introduction
 
-Now, we know what you may be thinking: “That’s obvious. It gets hotter.” But, if pressed for more information, how would you prove that?
-
-### Before You Begin
-•	Create a new repository for this project called python-api-challenge. Do not add this homework to an existing repository.
-
-•	Clone the new repository to your computer.
-
-•	Inside your local Git repository, create a directory for this assignment. Use a folder name that corresponds to the Challenges, such as WeatherPy.
-
-•	Inside the folder you just created, add the files called api_keys.py, WeatherPy.ipynb, and VacationPy.ipynb that you will find in the starter code ZIP file provided. These will be the main scripts to run for each analysis.
-
-Before you push your changes to GitHub, add a .gitignore file.
-
-### Add a .gitignore File
-•	For this assignment, you will need to add a .gitignore file to your repo. Doing so will prevent the api_keys.py file that contains your API key from being shared with the public. If you skip this step, anyone using GitHub could copy and use your API key, and you may incur charges as a result.
-
-•	To get started, type git status in the command line to see a list of all the untracked files that you have created so far.
-
-•	To add only the WeatherPy.ipynb file to GitHub, for example, type git add WeatherPy.ipynb. Keep in mind that you would have to add each file individually when adding or updating a file. A more efficient solution is to add all of the files that you don't want to track to the .gitignore file.
-
-•	Before adding your files to GitHub, add api_keys.py to the .gitignore file by following these steps:
-
- - Open your python-api-challenge GitHub folder in VS Code.
-
- - Open the .gitignore file and type the following code on the first line:
-______________________________
-1.	Adding config.py file.
-2.	api_keys.py
-______________________________
-
-In the command line, type git status and press Enter. The output should indicate that the .gitignore file has been modified and the api_keys.py file is untracked.
-
-Use git add, git commit, and git push to commit the modifications to the .gitignore, WeatherPy.ipynb and VacationPy.ipynb files to GitHub.
-
-On GitHub, the only new python files you should find are WeatherPy.ipynb and VacationPy.ipynb.
-
-Files
-Download the following files to help you get started:
-
-Module 6 Challenge filesLinks to an external site.
-
-## Instructions
-This activity is broken down into two deliverables, WeatherPy and VacationPy.
+This project explores how weather changes as I move closer to the equator. By leveraging Python, APIs, and JSON data, I aim to answer a fundamental question: "What is the weather like as I approach the equator?"
 
 ## Part 1: WeatherPy
-In this deliverable, you'll create a Python script to visualize the weather of over 500 cities of varying distances from the equator. You'll use the citipy Python libraryLinks to an external site., the OpenWeatherMap APILinks to an external site., and your problem-solving skills to create a representative model of weather across cities.
 
-For this part, you'll use the WeatherPy.ipynb Jupyter notebook provided in the starter code ZIP file. The starter code will guide you through the process of using your Python coding skills to develop a solution to address the required functionalities.
+### Visualizing Weather Relationships
 
-To get started, the code required to generate random geographic coordinates and the nearest city to each latitude and longitude combination is provided.
+I begin by visualizing the weather of over 500 cities worldwide and their relationship with latitude. The following scatter plots help me understand these relationships:
 
-### Requirement 1: Create Plots to Showcase the Relationship Between Weather Variables and Latitude
-To fulfill the first requirement, you'll use the OpenWeatherMap API to retrieve weather data from the cities list generated in the starter code. Next, you'll create a series of scatter plots to showcase the following relationships:
+-   **Latitude vs. Temperature:** How does temperature change with latitude?
+-   **Latitude vs. Humidity:** Is there a correlation between humidity and latitude?
+-   **Latitude vs. Cloudiness:** Does cloudiness vary with latitude?
+-   **Latitude vs. Wind Speed:** How does wind speed relate to latitude?
 
-•	Latitude vs. Temperature
+### Understanding the Data
 
-•	Latitude vs. Humidity
+I compute linear regression for each relationship, dividing the data into the Northern and Southern Hemispheres. Linear regression plots include the regression line, formula, and r-values. The plots I create are:
 
-•	Latitude vs. Cloudiness
+-   **Northern Hemisphere: Temperature vs. Latitude**
+-   **Southern Hemisphere: Temperature vs. Latitude**
+-   **Northern Hemisphere: Humidity vs. Latitude**
+-   **Southern Hemisphere: Humidity vs. Latitude**
+-   **Northern Hemisphere: Cloudiness vs. Latitude**
+-   **Southern Hemisphere: Cloudiness vs. Latitude**
+-   **Northern Hemisphere: Wind Speed vs. Latitude**
+-   **Southern Hemisphere: Wind Speed vs. Latitude**
 
-•	Latitude vs. Wind Speed
-
-### Requirement 2: Compute Linear Regression for Each Relationship
-To fulfill the second requirement, compute the linear regression for each relationship. Separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude). You may find it helpful to define a function in order to create the linear regression plots.
-
-Next, create a series of scatter plots. Be sure to include the linear regression line, the model's formula, and the r values as you can see in the following image
-
-Sample scatter plot with the linear regression line.
-
-![image](https://github.com/mehpree/python-api-challenge/assets/131678606/52d9f351-c99d-49a2-8f8c-0082757c799c)
-You should create the following plots:
-
-•	Northern Hemisphere: Temperature vs. Latitude
-
-•	Southern Hemisphere: Temperature vs. Latitude
-
-•	Northern Hemisphere: Humidity vs. Latitude
-
-•	Southern Hemisphere: Humidity vs. Latitude
-
-•	Northern Hemisphere: Cloudiness vs. Latitude
-
-•	Southern Hemisphere: Cloudiness vs. Latitude
-
-•	Northern Hemisphere: Wind Speed vs. Latitude
-
-•	Southern Hemisphere: Wind Speed vs. Latitude
-
-After each pair of plots, explain what the linear regression is modeling. Describe any relationships that you notice and any other findings you may uncover.
+After each pair of plots, I explain the implications of the linear regression models and any significant findings.
 
 ## Part 2: VacationPy
-In this deliverable, you'll use your weather data skills to plan future vacations. Also, you'll use Jupyter notebooks, the geoViews Python library, and the Geoapify API.
 
-The code needed to import the required libraries and load the CSV file with the weather and coordinates data for each city created in Part 1 is provided to help you get started.
+### Planning My Ideal Vacation
 
-Your main tasks will be to use the Geoapify API and the geoViews Python library and employ your Python skills to create map visualizations.
+In this section, I use my weather data analysis to plan future vacations based on preferred weather conditions. Here's what I do:
 
-To succeed on this deliverable of the assignment, open the VacationPy.ipynb starter code and complete the following steps:
-![image](https://github.com/mehpree/python-api-challenge/assets/131678606/1b7b45d4-60b3-4d42-b5f2-86ea5789581b)
+1.  **Creating a Humidity Map:** I created a map displaying points for every city in my dataset, where the point size represents humidity. This helps me identify regions with comfortable humidity levels.
+    
+2.  **Finding Ideal Weather Conditions:** Narrowed down my dataset to find cities with ideal weather conditions, considering factors like maximum temperature, wind speed, and cloudiness.
+    
+3.  **Locating Nearby Hotels:** I created a new DataFrame, `hotel_df`, to store information about cities, countries, coordinates, and humidity. For each city, I use the Geoapify API to find the nearest hotel located within 10,000 meters of its coordinates.
+    
+4.  **Visualizing My Vacation:** Add hotel names and countries as additional information in the hover message for each city on the map. This allows one to plan vacations based on preferred weather conditions while exploring different cities.
+    
 
-1. Create a map that displays a point for every city in the city_data_df DataFrame as shown in the following image. The size of the point should be the humidity in each city.
+## Conclusion
 
-Humidity map
-2. Narrow down the city_data_df DataFrame to find your ideal weather condition. For example:
+This project showcases the power of Python, APIs, and data visualization techniques in exploring and analyzing weather data. Understanding weather patterns and planning vacations based on weather preferences are essential applications of this analysis.
 
-- A max temperature lower than 27 degrees but higher than 21
+## Reference
 
-- Wind speed less than 4.5 m/s
-
-- Zero cloudiness
-
-3. Create a new DataFrame called hotel_df to store the city, country, coordinates, and humidity.
-
-4. For each city, use the Geoapify API to find the first hotel located within 10,000 meters of your coordinates.
-
-5. Add the hotel name and the country as additional information in the hover message for each city on the map as in the following image:
-
-![image](https://github.com/mehpree/python-api-challenge/assets/131678606/318dbb65-a6e0-4dee-bca4-3e30e23e84b1)
-
-
-#### Reference
-
-https://static.bc-edx.com/© 2023 edX Boot Camps LLC
+For this analysis, I utilized the [citipy Python](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api) to fetch weather information, and applied problem-solving skills to construct a comprehensive model of weather patterns across various cities.
