@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project explores how weather changes as I move closer to the equator. By leveraging Python, APIs, and JSON data, I aim to answer a fundamental question: "What is the weather like as I approach the equator?"
+This project explores how weather changes as someone moves closer to the equator. By leveraging Python, APIs, and JSON data, I aim to answer a fundamental question: "What is the weather like as I approach the equator?"
 
 ## Part 1: WeatherPy
 
